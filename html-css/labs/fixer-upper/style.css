@@ -21,18 +21,47 @@ body {
 #header {
   color: white;
   background-color: #4a75e6;
-  font-size: 20px;
+  font-size: 25px;
   height: 200px;
   margin: 0px;
-  padding-top: 3%;
+  padding-top: 1%;
+  padding-bottom: 30px;
   text-align: center;
   width: 100%;
 }
 
+.slogan{
+  font-style: italic;
+}
+
+#info{
+  background-color: #08AF22;
+  font-size: 30px;
+
+}
+
 #links {
   background-color: #Febc1f;
-  height: 50px;
+  border: thick solid #EA452F;
+  height: 75px;
   text-align: center;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.students{
+  background-color: #4A75E6;
+  padding-left: 10px;
+  font-size: 50px;
+}
+
+.studentpics{
+  border:solid;
+  border-radius: 50px;
+  height:300px;
+  width:540px;
+  margin:auto;
+
 }
 
 .link {
