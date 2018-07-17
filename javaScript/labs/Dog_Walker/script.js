@@ -17,17 +17,36 @@ let dogName1 = "Steve";
 let dogType1 = "beagle";
 
 // Complete Task 1 Below
-
+console.log("I will walk "+dogName1+" today at 12:00pm");
 
 
 let dogName2 = "Joe";
-let dogType2 = "bulldog";
+let dogType2 = "Corgi";
 
 // Complete Task 2 Below
-
+if(dogType2.toLowerCase()==="corgi"){
+  console.log("I will walk "+dogName2+" today at 12:00pm");
+}
+else{
+  console.log("I will walk "+dogName1+" today at 1:00pm");
+}
 
 
 let dogName = "Lola";
 let dogType = "poodle";
 
 // Complete Task 3 Below
+let faveDogs = ["spike", "jeremy", "lola", "peaches", "steve"];
+let x = "";
+if(faveDogs.includes(dogName.toLowerCase())){
+  x= ", one of my favorite dogs, "
+}
+if(dogType.toLowerCase()==="corgi" || dogType.toLowerCase()==="beagle"){
+  console.log("I will walk "+dogName+""+x+" today at 12:00pm");
+}
+else if(dogType.toLowerCase()==="bulldog"){
+  console.log("I will walk "+dogName+""+x+" today at 1:00pm");
+}
+else{
+  console.log("I will walk "+dogName+""+x+" today at 2:00pm");
+}
