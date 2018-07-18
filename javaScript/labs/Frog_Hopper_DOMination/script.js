@@ -14,12 +14,37 @@
 
 let currentlily = 1;
 
-let frogger = /*use a querySelector to grab your frog from your HTML*/;
+let frogger = document.querySelector("#frog");/*use a querySelector to grab your frog from your HTML*/;
 
-frogger.addEventListener(/* Insert type of event are we listening for */, function(){
+frogger.addEventListener("click", function(){
 // Insert what should happen when you click on the frog!
+console.log("hop");
 
-
-
+  frogger.style.left = "33.5%";
+  frogger.style.top = "23%";
+  document.querySelector("#lilypad1").classList.remove("active");
+  document.querySelector("#lilypad2").classList.add("active");
+  currentlily++;
 
 });
+
+frogger.addEventListener("mouseover", function(){
+  frogger.style.height = "80px" ;
+  frogger.style.width = "80px" ;
+});
+
+frogger.addEventListener("mouseleave", function(){
+  frogger.style.height = "70px" ;
+  frogger.style.width = "70px" ;
+});
+
+// <input type="text" onkeypress="spaceClicked(event)">
+function spaceClicked(event) {
+    if(event.keyCode=='32'){
+      frogger.style.right = "33.5%";
+      frogger.style.bottom = "23%";
+      document.querySelector("#lilypad2").classList.remove("active");
+      document.querySelector("#lilypad1").classList.add("active");
+      currentlily=1;
+    }
+}

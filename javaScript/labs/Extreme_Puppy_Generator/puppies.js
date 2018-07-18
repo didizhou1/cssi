@@ -19,11 +19,11 @@ let dataObject = {
       "id": "gxxlowyvtfS0M",
       "slug": "puppy-dog-run-gxxlowyvtfS0M",
       "url": "https://giphy.com/gifs/puppy-dog-run-gxxlowyvtfS0M",
-      "source": "https://littleanimalgifs.tumblr.com/post/17697600748",
+      "source": "https://78.media.tumblr.com/tumblr_lz27grdMiZ1ro67z5o1_250.gif",
       "rating": "g",
       "images": {
         "original": {
-          "url": "https://media0.giphy.com/media/gxxlowyvtfS0M/giphy.gif",
+          "url": "https://i.giphy.com/media/gxxlowyvtfS0M/giphy.webp",
         }
       },
       "title": "safe for work puppy GIF"
@@ -47,7 +47,7 @@ let dataObject = {
       "id": "3o6ZtaO9BZHcOjmErm",
       "slug": "dog-puppy-fly-3o6ZtaO9BZHcOjmErm",
       "url": "https://giphy.com/gifs/dog-puppy-fly-3o6ZtaO9BZHcOjmErm",
-      "source": "",
+      "source": "https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif",
       "rating": "g",
       "images": {
         "original": {
@@ -61,7 +61,7 @@ let dataObject = {
       "id": "3oz8xXS6gDYSNbqme4",
       "slug": "dog-cute-adorable-3oz8xXS6gDYSNbqme4",
       "url": "https://giphy.com/gifs/dog-cute-adorable-3oz8xXS6gDYSNbqme4",
-      "source": "",
+      "source": "https://media.giphy.com/media/3oz8xXS6gDYSNbqme4/giphy.gif",
       "rating": "g",
       "images": {
         "original": {
@@ -89,7 +89,7 @@ let dataObject = {
       "id": "4T7e4DmcrP9du",
       "slug": "puppy-biscuit-emerging-4T7e4DmcrP9du",
       "url": "https://giphy.com/gifs/puppy-biscuit-emerging-4T7e4DmcrP9du",
-      "source": "https://www.gifbay.com/gif/puppy_emerging_from_a_biscuit_package-120029/",
+      "source": "https://media.giphy.com/media/4T7e4DmcrP9du/giphy.gif",
       "rating": "g",
       "images": {
         "original": {
@@ -131,7 +131,7 @@ let dataObject = {
       "id": "l0Exk8EUzSLsrErEQ",
       "slug": "dance-dog-dancing-l0Exk8EUzSLsrErEQ",
       "url": "https://giphy.com/gifs/dance-dog-dancing-l0Exk8EUzSLsrErEQ",
-      "source": "",
+      "source": "https://media.giphy.com/media/l0Exk8EUzSLsrErEQ/giphy.gif",
       "rating": "g",
       "images": {
         "original": {

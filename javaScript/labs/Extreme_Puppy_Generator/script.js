@@ -13,3 +13,25 @@
 // limitations under the License.
 
 console.log(dataObject);
+
+const button = document.querySelector('.button');
+const clear = document.querySelector('.button');
+button.addEventListener('click', () => {
+
+let i=0
+  for(i=0;i<10;i++){
+    var dog = document.createElement("IMG");
+    dog.src = dataObject.data[i].images.original.url;
+    console.log(dog.src);
+    dog.classList.add("gif");
+    document.body.appendChild(dog);
+    var title = document.createElement("text");
+    title.innerText = dataObject.data[i].title;
+    document.body.appendChild(title);
+  }
+
+});
+
+clear.addEventListener('click', () => {
+  
+}

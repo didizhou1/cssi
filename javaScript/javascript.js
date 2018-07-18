@@ -41,7 +41,69 @@ greet("bob", "alice");
 const mult3=(x)=>x*3
 console.log(mult3(3));
 
-let n=0;
+/*let n=0;
 setInterval()(=>{
   console.log(new Date());
-},1000);
+},1000);*/
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const likeButton = document.querySelector('.likebutton');
+//   likeButton.addEventListener('click', () => {likebutton.innerText='Liked';});
+//   const greetMess = makeGreetingMessage(Alice);
+//   likeButton.innertext = greetMess;
+//   likeButton.style.backgroundColor='blue';
+// }
+
+const names = ["Jo","Bob", "Alice", "Ted"];
+console.log(names);
+
+for(let i=0;i<names.length;i++){
+  console.log(names[i]);
+}
+i=0;
+while(i<5){
+  console.log(names[i]);
+  i++
+}
+
+// names.forEach(name) =>{
+//   console.log('forEach: ${names}');
+// }
+
+const article = {
+  name: "Dog family gives birth to a little of 10 puppies",
+  views: 1234,
+  datePublished: "03/25/2018",
+  author: {
+    name: "Joe Corgi",
+    title: "Senior Canine Editor",
+  },
+  editors: [{
+    name: "Bob",
+    title: "Senior Editor"},
+    {
+    name: "Tim",
+    title: "Editor"}],
+}
+
+const floatingBox = document.querySelector(".floatingBox");
+document.addEventListener("keydown", (event)=>{
+  let boxTop = 100;
+  let boxLeft = 100;
+  const key = event.key;
+  if(key==="ArrowDown"){
+    boxTop += 5;
+  }
+  else if(key==="ArrowUp"){
+    boxTop -= 5;
+  }
+  else if(key==="ArrowLeft"){
+    boxLeft -= 5;
+  }else if(key==="ArrowRight"){
+    boxLeft += 5;
+  }else
+    return;
+  floatingBox.style.top = boxTop+"px";
+  floatingBox.style.left = boxLeft+"px";
+  console.log(event);
+});
