@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import requests
 ingredients = []
 
 enter_more = input("Do you have any specific ingredients to enter? [y|n]:").lower()
@@ -24,5 +25,10 @@ while enter_more == "y":
 
 recipe = input("What kind of recipe do you want to find?")
 
-# Write your code below!
+api_string = 'http://www.recipepuppy.com/api/?i={i}&q={r}'
+new_string = api_string.format(i=','.join(ingredients), r=recipe)
+print(new_string)
+r = requests.get(new_string)
+print(r.status_code)
 
+# Write your code below!

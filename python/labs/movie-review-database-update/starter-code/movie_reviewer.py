@@ -28,14 +28,11 @@ inside_movie = {
 
 # Write your code below to update the information in accordance with its
 # IMDB page: http://www.imdb.com/title/tt2096673/
-
-inside_movie['year_released']=2015
-inside_movie['score']=8.5
-inside_movie['reviews']=489496
-
-del inside_movie['out_of']
-
-inside_movie['genre']=['Animation','Adventure','Comedy']
-
-for x,y in inside_movie.items():
-    print('Key: {k}, Value: {v}'.format(k=x, v=y))
+if __name__ == '__main__':
+    inside_movie['year_released']=2015
+    inside_movie['score']=8.5
+    inside_movie['reviews']=489496
+    del inside_movie['out_of']
+    inside_movie['genre']=['Animation','Adventure','Comedy']
+    for x,y in inside_movie.items():
+        print('Key: {k}, Value: {v}'.format(k=x, v=y))
