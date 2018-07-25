@@ -35,6 +35,12 @@ class HouseHandler(webapp2.RequestHandler):
         start_template = jinja_env.get_template("templates/houselist.html")
         self.response.write(start_template.render({'house_info' : hogwarts_houses}))
 
+class WandHandler(webapp2.RequestHandler):
+    def get(self):
+        wands = Wand.query().fetch()
+        start_template = jinja_env.get_template("templates/wands.html")
+        self.response.write(start_template.render({'wand_info' : wands}))
+
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
         seed_data()
@@ -43,5 +49,6 @@ class LoadDataHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/houses', HouseHandler),
+    ('/wands', WandHandler),
     ('/seed-data', LoadDataHandler)
 ], debug=True)

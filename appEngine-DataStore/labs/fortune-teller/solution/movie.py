@@ -1,12 +1,14 @@
 
 from google.appengine.ext import ndb
 
+
 class Movie(ndb.Model):
     title = ndb.StringProperty(required=True)
     media_type = ndb.StringProperty(required=True, default = 'Movie')
     runtime = ndb.FloatProperty(required=False)
     rating = ndb.FloatProperty(required=False)
 
+    
     # def __init__(self, mov_title, type, runtime, user_rating):
     #     self.title = mov_title
     #     self.media_type = type

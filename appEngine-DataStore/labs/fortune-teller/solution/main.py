@@ -35,6 +35,7 @@ import os
 import jinja2
 import random
 from movie import Movie
+from google.appengine.ext import ndb
 
 def get_fortune():
     fortune_list=['Tomorrow, you will meet a life-changing new friend.',
@@ -69,8 +70,9 @@ class FortuneHandler(webapp2.RequestHandler):
 
 class DataFormHandler(webapp2.RequestHandler):
     def get(self):
+        data = {'movies': Movie.query().fetch()}
         start_template=jinja_current_directory.get_template("templates/formtemp.html")
-        self.response.write(start_template.render())
+        self.response.write(start_template.render(data))
 
     def post(self):
         movie_title = self.request.get('title')
@@ -80,6 +82,24 @@ class DataFormHandler(webapp2.RequestHandler):
         movie.put()
         self.get()
 
+        # q = Movie.query()
+        # movies = q.fetch()
+        # self.response.out.write('<br> <br>')
+        # for movie in movies:
+        #     self.response.out.write("{m} <br>".format(m=movie.title))
+class DataUpdateHandler(webapp2.RequestHandler):
+    def post(self):
+        movie_id = self.request.get("movie_id")
+        change = Movie.get_by_id(int(movie_id))
+        change.title = str(self.request.get("updatevalue"))
+        change.put()
+
+class DataDeleteHandler(webapp2.RequestHandler):
+    def post(self):
+        movie_id = self.request.get("movie_id")
+        movie_to_delete = Movie.get_by_id(int(movie_id))
+        movie_to_delete.key.delete()
+
 class TestDataHandler(webapp2.RequestHandler):
     def get(self):
         test_movie = Movie(title = 'Bill & Ted', runtime = 90, rating = 8.9)
@@ -88,5 +108,7 @@ class TestDataHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', FortuneHandler),
     ('/form', DataFormHandler),
-    ('/test', TestDataHandler)
+    ('/test', TestDataHandler),
+    ('/delete', DataDeleteHandler),
+    ('/update', DataUpdateHandler),
 ], debug=True)
