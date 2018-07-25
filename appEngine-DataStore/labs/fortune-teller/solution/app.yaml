@@ -27,7 +27,7 @@ handlers:
   static_dir: my-style-dir
 
 - url: /my-images-dir
-  static_dir: my-images-dir  
+  static_dir: my-images-dir
 
 - url: .*
   script: main.app

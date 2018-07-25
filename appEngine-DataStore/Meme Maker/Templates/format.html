@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Welcome</title>
+  </head>
+  <body>
+    <h1>Meme Generator</h1>
+    <img height = "100px" width "150px" src="https://static.boredpanda.com/blog/wp-content/uploads/2017/04/58fdbaac3329b_qWDL5Lq__700.jpg"/>
+    <h2>Welcome to my Meme Generator</h2>
+
+    <form method=POST action="/MemeResult">
+      <h3> Line 1 of meme: </h3>
+      <input type = 'text' name="use-first-line" value="First line of meme">
+      <h3> Line 2 of meme: </h3>
+      <input type = 'text' name="use-second-line" value="Second line of meme">
+
+      <br><br>
+      <select name="meme-type">
+        {% for meme in memes %}
+          <option value={{meme.id}}>{{meme.name}}</option>
+        <option value='61579'>One Does Not Simply</option>
+        <option value='438680'>Batman Slapping Robin</option>
+        <option value='101470'>Ancient Aliens</option>
+        <option value='61520'>Futurama Fry</option>
+        <option value='112126428'>Distracted Boyfriend</option>
+        <option value='1035805'>Boardroom Meeting Suggestion</option>
+        <option value='93895088'>Expanding Brain</option>
+        <option value='8072285'>Doge</option>
+        <option value='405658'>Grumpy Cat</option>
+        <option value='81378408'>Dog on Fire</option>
+
+        <input type='submit' value = "Go!">
+    </form>
+
+  </body>
